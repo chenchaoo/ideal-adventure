@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-content>.mui-table-view:first-child {
+				margin-top: -1px;
+			}
+		</style>
+	</head>
+<style type="text/css">
+	
+	
+#sliderSegmentedControl {
+    color: #ccccff;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+	.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #FFFFFF; font-size: 18px;}
+	.mui-news-top img{
+		width:130px;
+		height:85px;
+	}
+	.mui-news-body img{
+		width:100%;
+		height:auto;
+	}
+	.mui-news-body p{
+		font-size: 14px;
+		color: #333333;
+		line-height: 23px;
+	}
+	#datetime{
+		font-size: 10px;
+		color:#999999 ;
+		line-height: 20px;
+	}
+	.mui-table-view-cell{
+		padding: 15px 10px;
+	}
+	.mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+		font-size: 16px;
+		line-height: 47px;
+	}
+	.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+		font-size: 18px;
+	}
+	.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+		height: 47px;
+	}
+	.mui-table-view .mui-media-object.mui-pull-left{
+		max-width: 120px;
+		border-radius: 0;
+		margin-right: 15px;
+	}
+</style>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			
+			
+			
+			
+			
+			
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile" data-wid="news-top-subpage-1.html">
+							热点
+						</a>
+						<a class="mui-control-item" href="#item2mobile" data-wid="news-top-subpage-2.html">
+							贷款
+						</a>
+						<a class="mui-control-item" href="#item3mobile" data-wid="news-top-subpage-3.html">
+							理财
+						</a>
+						<a class="mui-control-item" href="#item4mobile" data-wid="news-top-subpage-4.html">
+							企业研究
+						</a>
+						<a class="mui-control-item" href="#item5mobile" data-wid="news-top-subpage-5.html">
+							小额贷款
+						</a>
+					</div>
+				</div>
+
+			</div>
+	
+			
+		</header>
+
+		
+		
+		
+			
+			
+		
+		<div class="mui-content">
+			<div class="mui-news-body">
+		    <!--顶部展示图片-->
+			    <!--<img src="../images/zx010412.png" >-->
+	           <!--</div>-->
+				<div id="slider" class="mui-slider mui-fullscreen">
+					
+					<div class="mui-slider-group">
+						
+						<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+							<div id="scroll1" class="mui-scroll-wrapper">
+								<div>
+									<!--轮播图开始-->
+									<div class="mui-content">
+										<ul class="mui-table-view mui-table-view-chevron">
+											<li id="switch" class="mui-table-view-cell">
+												
+											</li>
+										</ul>
+									</div>
+									<div id="slider1" class="mui-slider" >
+										<div class="mui-slider-group mui-slider-loop">
+											<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+											<div class="mui-slider-item mui-slider-item-duplicate">
+												<a href="#">
+													<img src="../images/zx010412.png" >
+												</a>
+											</div>
+											<!-- 第一张 -->
+											<div class="mui-slider-item">
+												<a href="#">
+													<img src="../images/zx010412.png" >
+												</a>
+											</div>
+											<!-- 第二张 -->
+											<div class="mui-slider-item">
+												<a href="#">
+													<img src="../images/zx010412.png" >
+												</a>
+											</div>
+											<!-- 第三张 -->
+											<div class="mui-slider-item">
+												<a href="#">
+													<img src="../images/zx010412.png" >
+												</a>
+											</div>
+											<!-- 第四张 -->
+											<div class="mui-slider-item">
+												<a href="#">
+													<img src="../images/zx010412.png" >
+												</a>
+											</div>
+											<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+											<div class="mui-slider-item mui-slider-item-duplicate">
+												<a href="#">
+													<img src="../images/zx010412.png" >
+												</a>
+											</div>
+										</div>
+										<div class="mui-slider-indicator">
+											<div class="mui-indicator mui-active"></div>
+											<div class="mui-indicator"></div>
+											<div class="mui-indicator"></div>
+											<div class="mui-indicator"></div>
+										</div>
+									</div>
+								<!--轮播图结束-->
+								</div>
+								<div class="mui-scroll">
+									<ul class="mui-table-view"></ul>
+								</div>
+							</div>
+						</div>
+						<div id="item2mobile" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div>
+									<!--<img src="../images/zx010412.png" >-->
+								</div>
+								<div class="mui-scroll">
+									<ul class="mui-table-view"></ul>
+								</div>
+							</div>
+						</div>
+						<div id="item3mobile" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div>
+									<!--<img src="../images/zx010412.png" >-->
+								</div>
+								<div class="mui-scroll">
+									<ul class="mui-table-view"></ul>
+								</div>
+							</div>
+						</div>
+						<div id="item4mobile" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div>
+									<!--<img src="../images/zx010412.png" >-->
+								</div>
+								<div class="mui-scroll">
+									<ul class="mui-table-view"></ul>
+								</div>
+							</div>
+						</div>
+						<div id="item5mobile" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div>
+									<!--<img src="../images/zx010412.png" >-->
+								</div>
+								<div class="mui-scroll">
+									<ul class="mui-table-view"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.pullToRefresh.js"></script>
+		<script src="../js/mui.pullToRefresh.material.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			mui("#slider1").slider({
+                interval: 3000
+           });
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					var pageCount = 0;
+					var pageCount1 = 0;
+					var pageCount2 = 0;
+					var pageCount3 = 0;
+					var pageCount4 = 0;
+					var pageCount5 = 0;
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						$(pullRefreshEl).pullToRefresh({
+							down: {
+								style:'circle',
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+									if(index == 0){
+										pageCount1++;
+										pageCount = pageCount1;
+									}else if(index==1){
+										pageCount2++;
+										pageCount = pageCount2;
+									}else if(index==2){
+										pageCount3++;
+										pageCount = pageCount3;
+									}else if(index==3){
+										pageCount4++;
+										pageCount = pageCount4;
+									}else if(index==4){
+										pageCount5++;
+										pageCount = pageCount5;
+									}
+										var ul = self.element.querySelector('.mui-table-view');
+//										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+										createFragment(ul, index, pageCount, 10, true);
+										self.endPullDownToRefresh();
+									}, 1000);
+								}
+							},
+							up: {
+								style:'circle',
+								auto:true,
+								contentrefresh: '正在加载...',
+								contentnomore:'没有更多数据了',
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+									
+//									$(pullRefreshEl).pullRefresh().endPullupToRefresh((++count > 2));
+									if(index == 0){
+										pageCount1++;
+										pageCount = pageCount1;
+									}else if(index==1){
+										pageCount2++;
+										pageCount = pageCount2;
+									}else if(index==2){
+										pageCount3++;
+										pageCount = pageCount3;
+									}else if(index==3){
+										pageCount4++;
+										pageCount = pageCount4;
+									}else if(index==4){
+										pageCount5++;
+										pageCount = pageCount5;
+									}
+										var ul = self.element.querySelector('.mui-table-view');
+//										mui('.mui-table-view').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+//										ul.appendChild(createFragment(ul, index, 5));
+										createFragment(ul, index, pageCount, 10);
+										self.endPullUpToRefresh();
+									}, 1000);
+								}
+							}
+						});
+					});
+					var createFragment = function(ul, index, pageCount, pageSize, reverse) {
+						index = index + 1;
+						mui.ajax('http://60.174.234.53:1020/index.php?m=Mobile&c=Index&a=ajaxGetMoreZixunList&type='+index+'&pageCount='+ pageCount +'&pageSize='+pageSize, {
+		                    dataType: 'json',
+		                    type: 'get',
+		                    timeout: 10000,
+	                        success: function(data) {
+		                      	console.log('success');
+			                    t=data;
+			                    var fragment = document.createDocumentFragment();
+		                        for (var i = data.length - 1; i >= 0; i--) {
+		                      	    var li = document.createElement('li');
+									li.className = 'mui-table-view-cell';
+									li.innerHTML = '<li data-id="' + i + '" class="mui-table-view-cell" ><a class="mui-navigate-right" href="zixun/zixun' + data[i].zixun_id + '.html"'+'><img class="mui-media-object mui-pull-left" src="'+ data[i].zixun_image +'"><div class="mui-media-body">' + data[i].title + '<div class="mui-media-body"><p class="mui-ellipsis-2">' + data[i].create_time + '</p></div></div></a></li>';
+									fragment.appendChild(li);
+//									console.log(li);
+		                        }
+		                        if(reverse){
+									ul.insertBefore(fragment, ul.firstChild);	
+								}else{
+									ul.appendChild(fragment);
+								}
+		                        
+								mui('#list').on('tap', 'li', function() {
+			                        mui.openWindow({
+			                            url: 'detail_sd.html',
+			                            id: 'detail_sd',
+			                            extras: {
+			                                title: t[this.getAttribute('data-id')].title,
+			                                create_time: t[this.getAttribute('data-id')].create_time,
+			                                zixun_id:t[this.getAttribute('data-id')].zixun_id,
+			                                zixun_image:t[this.getAttribute('data-id')].zixun_image
+			                            }
+			                        })
+		                        })
+	                        },
+	                        error: function() {
+		                      	console.log('failed');
+		                    }
+	                   })
+					};
+				});
+			})(mui);
+			
+			//从首页进入资讯列表也获取资讯列表内容
+			mui.plusReady(function() {
+                console.log("当前页面URL：" + plus.webview.currentWebview().getURL());
+                mui.ajax('http://60.174.234.53:1020/index.php?m=Mobile&c=Index&a=ajaxGetMoreZixunList&p=1', {
+                    dataType: 'json',
+                    type: 'get',
+                    timeout: 10000,
+                    success: function(data) {
+                        t=data;
+                        var finallist = '';
+                        for (i = data.length - 1; i >= 0; i--) {
+                          	var li = document.createElement('li');
+						    li.className = 'mui-table-view-cell';
+						    li.innerHTML = '<li data-id="' + i + '" class="mui-table-view-cell" ><a class="mui-navigate-right" href="zixun/zixun' + data[i].zixun_id + '.html"'+'><div class="mui-media-body">' + data[i].title + '<div class="mui-media-body"><p class="mui-ellipsis-2">' + data[i].create_time+ '</p></div></div></a></li>';
+						    table.appendChild(li);
+                        }
+                            console.log("plus"+finallist);
+                            mui('#list').on('tap', 'li', function() {
+                                mui.openWindow({
+                                    url: 'detail_sd.html',
+                                    id: 'detail_sd',
+                                    extras: {
+                                        title: t[this.getAttribute('data-id')].title,
+//                                    author: t[this.getAttribute('data-id')].author,
+//                                    pubtime: t[this.getAttribute('data-id')].pubtime,
+                                        create_time: t[this.getAttribute('data-id')].create_time,
+                                        zixun_id: t[this.getAttribute('data-id')].zixun_id,
+                                        zixun_image:t[this.getAttribute('data-id')].zixun_image
+                                    }
+                                })
+                              
+                            })
+                    },
+                    error: function() {}
+                })
+            })
+		</script>
+		
+		
+		
+		<!--test start-->
+
+		<!--start end-->
+	</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>企业信息认证</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+		<!--App自定义的css-->
+		
+		<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+		<style>
+			h5 {
+				margin: 5px 7px;
+			}
+			
+			.mui-table-view-cell{
+				padding: 20px 0;
+				
+				
+			}
+			.mui-table-view-cell  span{
+				color: #999;
+			}
+			.mui-table-view-cell.mui-collapse>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse>.mui-push-right:after{
+				content:'';
+			}
+			.mui-table-view-cell.mui-collapse.mui-active>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active>.mui-push-right:after{
+				content: '';
+			}
+			.mui-input-row label{
+				width: 125px;
+				font-size: 14px;
+				padding: 20px 0px;
+				color: #333;
+			}
+			.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+				width: auto;
+			}
+			.mui-input-group input:last-child{
+				font-size: 14px;
+				color: #ccc;
+				margin: 0;
+				padding: 0;
+				height: 55px;
+				line-height: 55px;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				font-size: 12px;
+			}
+			.mui-ios .mui-table-view-cell{
+				font-family: 'Helvetica Neue', Helvetica, sans-serif;
+			}
+			.mui-input-group .mui-input-row{
+				height: auto;
+			}
+			.mui-table-view-cell span img{
+				position: relative;
+				bottom: 20px;
+				left: 55px;
+			}
+			.mui-input-group .mui-input-row::after{
+				height: 0;
+			}
+			.mui-input-group .mui-input-row{
+				margin: 0 20px;
+				border-bottom: 1px solid #eee;
+			}
+			.mui-input-group::before{
+				background: none;
+			}
+			.mui-table-view-cell::after{
+				height: 0;
+			}
+			.mui-table-view-cell{
+				margin: 0 20px;
+				border-bottom: 1px solid #eee;
+			}
+			.mui-table-view-cell .mui-navigate-right p{
+				width: 125px;
+				font-size: 14px;
+				padding: 0px;
+				color: #333;
+				float: left;
+			}
+			.mui-table-view-cell .mui-navigate-right .mui-xz{
+				font-size: 14px;
+				color: #666666;
+				position: absolute;
+				right: 20px;
+				font-weight: normal;
+			}
+			.mui-input-group::after{
+				background: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-daohang"></div>
+		<header class="mui-bar mui-bar-naver mui-san">
+			<a class="mui-icon" href="javascript:history.go(-1)" target="_self">
+				<img src="../images/fanhui2.png">
+			</a>
+			<h1 class="mui-title" style="text-align: center;margin: 0;">企业信息认证</h1>
+		</header>
+		<div class="mui-content">
+			<h5 class="mui-content-padded" style=" margin:0;background: #ffeeb1;font-size:10px;font-weight:normal;padding: 10px 12px;color:#ff6600; line-height: 15px;">
+				<img src="../images/dl.png" style=" width: 15px; float: left; margin-right: 5px;">
+				该信息将作为您的企业实名凭证请确保真实
+			</h5>
+			<div class="mui-content-padded" style="margin: 0px;">
+				<div style="width: 100%;background: #fafafa;padding: 15px 20px;"><h4 style="font-size:14px;color:#666;font-weight:normal; margin: 0;">企业基本信息</h4></div>
+				<div class="mui-input-group" style="height: 0; background: none; border: none;">
+					<div class="mui-input-row">
+						<label>企业名称</label>
+						<input type="text" placeholder="请输入企业名称">
+					</div>
+					<div class="mui-input-row">
+						<label>企业法人</label>
+						<input type="text" placeholder="企业法人">
+					</div>
+					<div class="mui-input-row">
+						<label>法人身份证</label>
+						<input type="text" placeholder="请输入企业法人身份证号">
+					</div>
+					<div class="mui-input-row">	
+						<label>所在地区</label>
+						<input type="text" placeholder="公司所在地区">
+					</div>
+					<div class="mui-input-row">
+						<label>成立年月</label>
+						<input type="text" placeholder="处理年月">
+					</div>
+					<div class="mui-input-row">
+						<label>社会信用代码</label>
+						<input type="text" placeholder="统一社会信用代码">
+					</div>
+					<div class="mui-input-row">
+						<label>对公账户</label>
+						<input type="text" placeholder="对公账户">
+					</div>
+					<div class="mui-input-row">
+						<label>开户行</label>
+						<input type="text" placeholder="开户行">
+					</div>
+					<div class="mui-input-row" style="border: none;">
+						<label></label>
+						
+					</div>
+					<div style="width: 100%;background: #fafafa;padding: 15px 20px;">
+						<h4 style="font-size:14px;color:#666;font-weight:normal; margin: 0;">进阶材料</h4>
+					</div>
+
+			<li class="mui-table-view-cell mui-collapse" style="list-style: none;">
+						<a class="mui-navigate-right" id='showUserPicker' type='button'>
+							<p>企业类别</p>
+							<span class="mui-xz"><div id='userResult' class="ui-alert">请选择</div><img src="../images/tb.png"/></span>
+						</a>
+				</li>
+			<li class="mui-table-view-cell mui-collapse" style="list-style: none;">		
+						<a class="mui-navigate-right" id='showCityPicker' type='button'>
+							<p>在缴社保人数</p>
+							<span class="mui-xz"><div id='cityResult' class="ui-alert">请选择</div><img src="../images/tb.png"/></span>
+						</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse" style="list-style: none;">			
+						<a class="mui-navigate-right" id='showCityPicker1' type='button'>
+							<p>车辆信息</p>
+							<span class="mui-xz"><div id='cityResult1' class="ui-alert">请选择</div><img src="../images/tb.png"/></span>
+						</a>	
+				</li>
+			<li class="mui-table-view-cell mui-collapse" style="list-style: none;">
+						<a class="mui-navigate-right" id='showCityPicker2' type='button'>
+							<p>房产类型</p>
+							<span class="mui-xz"><div id='cityResult2' class="ui-alert">请选择</div><img src="../images/tb.png"/></span>
+						</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse" style="list-style: none; margin-bottom: 80px;">
+						<a class="mui-navigate-right" id='showCityPicker3' type='button'>
+							<p>您的信用情况</p>
+							<span class="mui-xz"><div id='cityResult3' class="ui-alert">请选择</div><img src="../images/tb.png"/></span>
+						</a>
+				</li>
+						<!--<button type="button" class="mui-btn mui-btn-primary" onclick="return false;" style="position: fixed;bottom: 0%;background-color: #ff9900;width: 100%;border: none;border-radius:0px;font-size: 18px;">
+							申请认证
+						</button>-->
+						<a href="qyrz.html" class="mui-btn mui-btn-primary" style="position: fixed;bottom: 0%;background-color: #ff9900;width: 100%;border: none;border-radius:0px;font-size: 16px; padding: 12px 0;font-weight: normal;">
+							申请认证
+						</a>
+						
+					
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<!--<script src="../js/mui.picker.min.js"></script>-->
+		<script src="../js/mui.picker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			 //语音识别完成事件
+			document.getElementById("search").addEventListener('recognized', function(e) {
+				console.log(e.detail.value);
+			});
+
+			var nativeWebview, imm, InputMethodManager;
+			var initNativeObjects = function() {
+				if (mui.os.android) {
+					var main = plus.android.runtimeMainActivity();
+					var Context = plus.android.importClass("android.content.Context");
+					InputMethodManager = plus.android.importClass("android.view.inputmethod.InputMethodManager");
+					imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);
+				} else {
+					nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+				}
+			};
+			var showSoftInput = function() {
+				if (mui.os.android) {
+					imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+				} else {
+					nativeWebview.plusCallMethod({
+						"setKeyboardDisplayRequiresUserAction": false
+					});
+				}
+				setTimeout(function() {
+					var inputElem = document.querySelector('input');
+					inputElem.focus();
+					inputElem.parentNode.classList.add('mui-active'); //第一个是search，加上激活样式
+				}, 200);
+			};
+			mui.plusReady(function() {
+				initNativeObjects();
+				showSoftInput();
+			});
+
+		</script>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					/**
+					 * 获取对象属性的值
+					 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+					 * @param {Object} obj 对象
+					 * @param {String} param 属性名
+					 */
+					var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '企业类别'
+					}, ]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//级联示例
+					var cityPicker1 = new $.PopPicker();
+					cityPicker1.setData([{
+						value: 'ywj1',
+						text: '车辆信息'
+					}, ]);
+					var showCityPickerButton = doc.getElementById('showCityPicker1');
+					var cityResult1 = doc.getElementById('cityResult1');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker1.show(function(items) {
+							cityResult1.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//级联示例
+					var cityPicker = new $.PopPicker();
+					cityPicker.setData([{
+						value: 'ywj',
+						text: '在缴社保人数'
+					}, ]);
+					var showCityPickerButton = doc.getElementById('showCityPicker');
+					var cityResult = doc.getElementById('cityResult');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker.show(function(items) {
+							cityResult.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//级联示例
+					var cityPicker2 = new $.PopPicker();
+					cityPicker2.setData([{
+						value: 'ywj2',
+						text: '房产类型'
+					}, ]);
+					var showCityPickerButton = doc.getElementById('showCityPicker2');
+					var cityResult2 = doc.getElementById('cityResult2');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker2.show(function(items) {
+							cityResult2.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//级联示例
+					var cityPicker3 = new $.PopPicker();
+					cityPicker3.setData([{
+						value: 'ywj3',
+						text: '您的信用情况1级'
+					}, ]);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('cityResult3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							cityResult3.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+				});
+			})(mui, document);
+		</script>
+	</body>
+
+</html>

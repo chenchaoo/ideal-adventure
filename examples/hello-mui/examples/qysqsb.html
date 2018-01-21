@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+		<style>
+			.mui-input-group .mui-input-row{
+				height: 104px;
+			}
+			.mui-checkbox label, .mui-radio label{
+				float:left;
+				width: 40%;
+			}
+			.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio]{
+				top:30px
+			}
+			.mui-card{
+				margin: 0px;
+				box-shadow:0 1px 2px #fff;
+			}
+			.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio]{
+				left: 7px;
+			}
+			.mui-checkbox.mui-left label, .mui-radio.mui-left label{
+				padding-left: 35px;
+			}
+			.itum-aa{
+				list-style:none;
+			}
+			.itum-aa li{
+				width: 100%;
+				float: left;
+				position:relative;
+				left: 75px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" >
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">申请结果</h1>
+			
+		</header>
+		<div style="height: 200px;background: #5c6bc2;position: relative;top: 43px;">
+			<p class="mui-title" style="font-size: 16px;position: relative;bottom: -26px;">很遗憾，申请失败</p>
+			
+			<h3 style="padding: 0 20px;color: #7e8ad2;font-size: 11px;margin: 0 auto;position: relative;top: 60px;">很抱歉，您的资质不符合该贷款产品的申请要求</h3>
+		</div>
+		<div class="mui-content" style="padding-top: 33px;">
+			<h5 class="mui-content-padded" style="background: #ffeeb1;font-size:9px;font-weight:400;padding: 10px 12px;color:#ff6600"><img src="../images/dl.png" width="16px" />&nbsp;&nbsp;系统为您推荐出符合您资质的产品,请立即申请</h5>
+			<div class="mui-card">
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-checkbox mui-left" style="border: 1px solid #fff;">
+						<label><img src="../images/jpsq.png"/></label>
+						<ul  class="itum-aa">
+						<li style="top: -87px;"><span style="font-size:13px ;">南昌银行</span></li>
+						<li style="top: -83px;"><span style="color: #9b9b9b;font-size: 8px;">可贷款8-50万，分期还款</span></li>
+						<li style="top: -78px;"><span style="height: 18px;font: 11px;color: #ffad77;border: 1px solid #ffad77;">房屋抵押</span></li>
+						</ul>
+						<span style="position: relative;top: 25px;left: 152px;font-size:13px ;color: #ff6600;">4.6%</span>
+						<span style="position: relative;top: 49px;left: 60px;font-size: 8px;color: #9b9b9b;">5633个企业申请</span>
+						<input name="checkbox" value="Item 1" type="checkbox" >
+					</div>
+					<div class="mui-input-row mui-checkbox mui-left">
+						<label><img src="../images/jpsq.png"/></label>
+						<ul class="itum-aa">
+						<li style="top: -87px;"><span style="font-size:13px ;">南昌银行</span></li>
+						<li style="top: -83px;"><span style="color: #9b9b9b;font-size: 8px;">可贷款8-50万，分期还款</span></li>
+						<li style="top: -78px;"><span style="height: 18px;font: 11px;color: #ffad77;border: 1px solid #ffad77;">房屋抵押</span></li>
+						</ul>
+						<span style="position: relative;top: 25px;left: 152px;font-size:13px ;color: #ff6600;">4.6%</span>
+						<span style="position: relative;top: 49px;left: 60px;font-size: 8px;color: #9b9b9b;">5633个企业申请</span>
+						<input name="checkbox" value="Item 2" type="checkbox" checked>
+					</div>
+					<button type="button" class="mui-btn mui-btn-primary" onclick="return false;" style="position: fixed;bottom: 0%;background-color: #ff9900;width: 100%;border: 1px solid #ff9900;border-radius:0px;font-size: 16px;">下一步</button>
+				</form>
+			</div>
+		
+			
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		mui('.mui-input-group').on('change', 'input', function() {
+			var value = this.checked?"true":"false";
+			this.previousElementSibling.innerText = "checked："+value;
+		});
+	</script>
+</html>

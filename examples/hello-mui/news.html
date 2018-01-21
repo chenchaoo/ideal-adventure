@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+<style type="text/css">
+	
+	#sliderSegmentedControl{
+		font-size: 17px;
+		color:#CCCCff;
+		text-align: center;
+		/*margin-left: 5px;*/
+		width: 100%;
+
+		
+	}
+	.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #FFFFFF; font-size: 18px;}
+	.mui-news-top img{
+		width:130px;
+		height:85px;
+	}
+	.mui-news-body img{
+		width:100%;
+		height:auto;
+	}
+	.mui-news-body p{
+		font-size: 14px;
+		color: #333333;
+		line-height: 20px;
+	}
+	#datetime{
+		font-size: 12px;
+		color:#999999 ;
+	}
+	.mui-table-view-cell{
+		padding: 15px 10px;
+	}
+	
+	
+</style>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile" data-wid="news-top-subpage-1.html">
+							热点
+						</a>
+						<a class="mui-control-item" href="#item2mobile" data-wid="news-top-subpage-2.html">
+							贷款
+						</a>
+						<a class="mui-control-item" href="#item3mobile" data-wid="news-top-subpage-3.html">
+							理财
+						</a>
+						<a class="mui-control-item" href="#item4mobile" data-wid="news-top-subpage-4.html">
+							企业研究
+						</a>
+						<a class="mui-control-item" href="#item5mobile" data-wid="news-top-subpage-5.html">
+							小额贷款
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<script src="../js/mui.min.js"></script>
+		<script src="../js/webviewGroup.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.init();
+			
+			mui.plusReady(function() {
+				var _self = plus.webview.currentWebview();
+				var group = new webviewGroup(_self.id, {
+					items: [{
+						id: "news-top-subpage-1.html",
+						url: "news-top-subpage-1.html",
+						extras: {}
+					}, {
+						id: "news-top-subpage-2.html",
+						url: "news-top-subpage-2.html",
+						extras: {}
+					}, {
+						id: "news-zx-licai.html",
+						url: "news-zx-licai.html",
+						extras: {}
+					}, {
+						id: "news-zx-qiyeyanjiu.html",
+						url: "news-zx-qiyeyanjiu.html",
+						extras: {}
+					}, {
+						id: "news-zx-xiaoedaikuan.html",
+						url: "news-zx-xiaoedaikuan.html",
+						extras: {}
+					}],
+					onChange: function(obj) {
+						var c = document.querySelector(".mui-control-item.mui-active");
+						if(c) {
+							c.classList.remove("mui-active");
+						}
+						var target = document.querySelector(".mui-scroll .mui-control-item:nth-child(" + (parseInt(obj.index) + 1) + ")");
+						target.classList.add("mui-active");
+						if(target.scrollIntoView) {
+							target.scrollIntoView();
+						}
+					}
+				});
+				mui(".mui-scroll").on("tap", ".mui-control-item", function(e) {
+					var wid = this.getAttribute("data-wid");
+					group.switchTab(wid);
+				});
+
+			});
+			mui.back = function() {
+				var _self = plus.webview.currentWebview();
+				_self.close("auto");
+			}
+		</script>
+			
+		</header>
+		
+		<div class="mui-content">
+			<div class="mui-news-body">
+		    <!--顶部展示图片-->
+		    <img src="../images/zx010412.png" >
+           </div>
+			<!--热点文章内容开始-->
+			<div class="mui-news-body">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="news-articles.html">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="news-articles.html">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="news-articles.html">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="news-articles.html">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/zx010411.png">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis-2'>沪深300中的战斗基 投基高手教你管理闲钱</p>
+								<p id="datetime">2017-12-22</p>
+							</div>
+						</a>
+					</li>
+					
+	
+				</ul>
+			</div>
+		</div>
+		<div class="mui-footer"></div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item2" href="../index.html">
+				<span class="mui-icon mui-icon-shouye"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item2 mui-active" href="news.html">
+				<span class="mui-icon mui-icon-zixun"></span>
+				<span class="mui-tab-label">资讯</span>
+			</a>
+			<a class="mui-tab-item2" href="find.html">
+				<span class="mui-icon mui-icon-faxian"></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a class="mui-tab-item2" href="account.html">
+				<span class="mui-icon mui-icon-zhanghu"></span>
+				<span class="mui-tab-label">账户</span>
+			</a>
+		</nav>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+	</head>
+	<style>
+		#header{background-color: #5B6BC2;
+	            box-shadow:none;}
+		.mui-loanwrz-body{
+			height:270px;
+			background-color: #5B6BC2;
+			text-align: center;
+			/*margin: 0 auto;*/
+			
+		}
+		.mui-loanwrz-body h1{
+			text-align: center;
+			color: #FFFFFF;
+			font-size: 35px;
+			margin-top:0px;
+			padding-top: 30px;
+			
+		}
+		.mui-loanwrz-body span{
+			text-align: center;
+			color: #FFFFFF;
+			font-size: 13px;
+			margin-top:45px;
+			float: right;
+		}
+		
+.mui-loanwrz-body img {
+	display: inline-block;
+    margin-right: 8px;
+    margin-top: 48px;
+    width: 15px;
+}
+		
+.mui-loanwrz-body .mui-btn {
+    background-color: #ff9900;
+    border: medium none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 45px;
+    padding: 12px 0;
+    width: 210px;
+}
+	</style>
+	
+	<body>
+		<div class="mui-daohang"></div>
+		<header class="mui-bar mui-bar-naver mui-san">
+			<a class="mui-icon" href="javascript:history.go(-1)" target="_self">
+				<img src="../images/fanhui2.png">
+			</a>
+			<h1 class="mui-title" style="text-align: center;margin: 0;"></h1>
+		</header>
+		<div class="mui-content">
+			 <div class="mui-loanwrz-body">
+			 	<h1>尚未认证</h1>
+			 	<div style="margin: 0px auto; width: 205px;">
+			 	<img src="../images/loan-wzx010611.png"><span>企业认证后信息，即可申请贷款</span>
+			 	</div>
+			 	<!--<button class="mui-btn" type="button">申请认证</button>-->
+			 	<a href="authentication.html" class="mui-btn">申请认证</a>
+
+			 </div>
+		</div>
+	</body>
+</html>

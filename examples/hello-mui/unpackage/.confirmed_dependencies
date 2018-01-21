@@ -1,0 +1,16 @@
+{
+  "index.html": {
+    "refer": [
+      "examples/account.html"
+    ],
+    "resources": [
+      "images/zixun1.jpg",
+      "images/zixun2.jpg",
+      "images/kuaixun.png",
+      "css/mui.min.css",
+      "js/update.js",
+      "images/sydk1.png",
+      "images/sydk2.png"
+    ]
+  }
+}

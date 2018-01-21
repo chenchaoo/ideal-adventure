@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="list-to-detail/list-to-detail.css" />
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.title{
+				margin: 20px 15px 7px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			.mui-liuc .mui-liuc-yi p{
+				color: #999;
+				font-size: 12px;
+			}
+			.mui-liuc .mui-liuc-er p{
+				font-size: 17px;
+			}
+			.mui-liuc li.mui-liuc-er p span{
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-daohang"></div>
+		<header class="mui-bar mui-bar-naver mui-san">
+			<a class="mui-icon" href="javascript:history.go(-1)" target="_self">
+				<img src="../images/fanhui2.png">
+			</a>
+			<h1 class="mui-title" style="text-align: center;margin: 0;">{{goods_name}}-{{subtitle}}</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-liuc">
+				<li class="mui-liuc-yi">
+					<p>短期<span>|</span>30天</p>
+					<p>6.33%</p>
+				</li>
+				<li class="mui-liuc-er">
+					<p>长期<span>|</span>365天</p>
+					<p>8.33%</p>
+				</li>
+				<li class="mui-liuc-yi">
+					<p>长期 <span>|</span>365天</p>
+					<p>8.33%</p>
+				</li>
+			</ul> 
+			<div class="mui-liuc-daik">
+				<p>我想贷款</p>
+				<p class="mui-money">100,000</p>
+			</div>
+			<div class="mui-liuc-heto">
+				<p>625.00</p>
+				<p class="mui-money">预估总费用（最终以合同约定为准）</p>
+			</div>
+			<div class="mui-zixunbt">
+				<h1>办理流程</h1>
+			</div>
+			<div class="mui-liuc-tu">
+				<li>
+					<img src="../images/liuc1.png">
+					<img class="mui-jiantou" src="../images/liuc.png">
+					<p>申请贷款</p>
+				</li>
+				<li>
+					<img src="../images/liuc2.png">
+					<img class="mui-jiantou" src="../images/liuc.png">
+					<p>电话初审</p>
+					
+				</li>
+				<li>
+					<img src="../images/liuc3.png">
+					<img class="mui-jiantou" src="../images/liuc.png">
+					<p>门店办理</p>
+					
+				</li>
+				<li class="mui-last">
+					<img src="../images/liuc4.png">
+					<p>审批放款</p>
+					
+				</li>
+			</div>
+		    <div class="mui-zixunbt">
+				<h1>申请条件</h1>
+			</div>
+			<div class="mui-liuc-nr">
+				<p>1、年龄23-55周岁</p>
+				<p>2、本地单位经营12个月以上</p>
+				<p>3、不接受木材、石材、钢材买容美发行业申请</p>
+				<p>4、信用良好，无90天以上逾期，真不接受信用空白人事申请。</p>
+			</div>
+			<div class="mui-zixunbt">
+				<h1>所需材料</h1>
+			</div>
+			<div class="mui-liuc-nr mui-er">
+				<p>1、营业执照</p>
+				<p>2、工商局纳税证明</p>
+				<p>3、公积金缴纳明细</p>
+			</div>
+			<!--<button id="" class="mui-tijiao" type="button">立即申请</button>-->
+			<a id="" class="mui-tijiao" href="cpsq-1.html">立即申请</a>
+		</div>
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			function getDefaultData() {
+				return {
+					cover: '',
+					title: '',
+					author: '',
+					time: '',
+					content: ''
+				}
+			}
+
+			var vm = new Vue({
+				el: '.mui-content',
+				data: getDefaultData(),
+				methods: {
+					resetData: function() {//重置数据
+						Object.assign(this.$data, getDefaultData());
+					}
+				}
+			});
+
+			//监听自定义事件，获取新闻详情
+			document.addEventListener('get_detail', function(event) {
+				var guid = event.detail.guid;
+				if(!guid) {
+					return;
+				}
+				
+				//前页传入的数据，直接渲染，无需等待ajax请求详情后
+				vm.cover = event.detail.cover;
+				vm.goods_name = event.detail.goods_name;
+				vm.subtitle = event.detail.subtitle;
+				vm.quota_range_start = event.detail.quota_range_start;
+				vm.quota_range_end = event.detail.quota_range_end;
+				//向服务端请求文章详情内容
+				mui.ajax('http://60.174.234.53:1022/Home/Index/ajaxZixunDetail?post_id=' + guid, {
+					type:'GET',
+					dataType: 'json', //服务器返回json格式数据
+					timeout: 15000, //15秒超时
+					success: function(rsp) {
+						mui.toast('数据获取成功,产品ID是'+guid);
+//						vm.content = rsp.content;
+					},
+					error: function(xhr, type, errorThrown) {
+						mui.toast('获取文章内容失败');
+						//TODO 此处可以向服务端告警
+					}
+				});
+			});
+
+			//重写返回逻辑
+			mui.back = function() {
+				plus.webview.currentWebview().hide("auto", 300);
+			}
+			
+			//窗口隐藏时，重置页面数据
+			mui.plusReady(function () {
+				var self = plus.webview.currentWebview();
+				self.addEventListener("hide",function (e) {
+					window.scrollTo(0, 0);
+					vm.resetData();
+				},false);
+			})
+			
+		</script>
+		
+	</body>
+	
+</html>

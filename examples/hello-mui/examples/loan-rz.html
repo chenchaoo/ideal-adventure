@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+	</head>
+	<style>
+		#header{background-color: #5B6BC2;
+	            box-shadow:none;}
+	    .mui-loanrz-top{
+	    	background-color: #5B6BC2;
+			text-align: center;
+	    }
+	    .mui-loanrz-top h3{
+	    	font-size: 14px;
+            color: #A6B3FF;
+            padding: 20px 0;
+            margin: 0;
+            font-weight: normal;
+	    }
+	    .mui-loanrz-top h1{
+	    	font-size: 35px;
+            color: #FFFFFF;
+            margin: 40px auto 0;
+            border-bottom: 1px solid  rgba(191, 199, 245, 0.32);
+            padding-bottom: 15px;
+            width: 210px;
+            font-family: Roboto-Regular;
+	    }
+	    .mui-loanrz-top button {
+	    	background-color: #ff9900;
+	    	border: medium none;
+	    	border-radius: 30px;
+	    	color: #ffffff;
+	    	font-size: 16px;
+	    	margin-top: 25px;
+	    	padding: 12px 0;
+	    	width: 210px;
+	    	margin-bottom: 40px;
+	    	}
+	    .mui-loanrz-choose{
+	    	height: 61px;
+	    	margin-top: 10px;
+	    	padding: 15px 10px;
+	    	background: #fff;
+	    	border-bottom: 1px solid #eee;
+	    }
+	    .mui-loanrz-choose ul{
+	    	margin: 0;
+	    	padding: 0;
+	    	list-style: none;
+	    }
+	    .mui-loanrz-choose ul li{
+	    	width: 33.3333%;
+	    	float: left;
+	    	text-align: center;
+	    }
+	    .mui-loanrz-choose ul li span{
+	    	color: #000;
+	    	font-size: 15px;
+	    }
+	    .mui-loanrz-choose ul li .mui-pull-left{
+	    	float: none;
+	    }
+	    .mui-loanrz-body h5{
+	    	font-size: 13px; 
+	    	color: #999999;
+	    	padding: 15px 10px;
+	    	border-bottom: 1px solid #eee;
+	    	margin: 0;
+	    	font-weight: normal;
+	    }
+	    .mui-sqjilu img{
+	    	width:73px;
+	    	height:73px;
+	    }
+	    .mui-loanrz-body{
+	    	background: #fff;
+	    	padding: 0;
+	    }
+	    .mui-sqjilu .mui-media-object{
+	    	width: 75px;
+	    }
+	    .mui-media-body p.mui-ellipsis{
+	    	margin-bottom: 8px;
+	    }
+	    .mui-sqjilu .mui-media-body p.mui-time .mui-shijian{
+	    	line-height: 25px;
+	    }
+	    .mui-btn-outlined.mui-btn-warning, .mui-btn-outlined.mui-btn-yellow{
+	    	font-size: 12px;
+	    	border: 1px solid #ff6600;
+	    	border-radius: 0;
+	    	padding: 2px;
+	    	color: #ff6600;
+	    }
+	    .mui-btn-outlined.mui-btn-green, .mui-btn-outlined.mui-btn-positive, .mui-btn-outlined.mui-btn-success{
+	    	font-size: 12px;
+	    	border: 1px solid #2abd31;
+	    	border-radius: 0;
+	    	padding: 2px;
+	    	color: #2abd31;
+	    }
+	    .mui-btn-outlined.mui-btn-blue, .mui-btn-outlined.mui-btn-primary{
+	    	font-size: 12px;
+	    	border: 1px solid #5c6bc2;
+	    	border-radius: 0;
+	    	padding: 2px;
+	    	color: #5c6bc2;
+	    }
+	    .mui-pull-bottom-pocket {
+	    	position:absolute;
+	    	bottom:0;
+	    	height:40px;
+	    	}
+	</style>
+	
+	<body>
+		<div class="mui-daohang"></div>
+		<header class="mui-bar mui-bar-naver mui-san">
+			<a class="mui-icon" href="javascript:history.go(-1)" target="_self">
+				<img src="../images/fanhui2.png">
+			</a>
+			<h1 class="mui-title" style="text-align: center;margin: 0;">贷款</h1>
+		</header>
+		<div class="mui-content" id="news">
+			<div class="mui-loanrz-top">
+				<h3>请输入您要的金额 一键为您推荐（元）</h3>
+				<h1>100,000</h1>
+				<a href="loan-wrz.html"><button class="mui-btn" type="button" id="mui-btn-wydk" >我要贷款</button></a>
+			</div>
+			<div class="mui-loanrz-choose">
+				<ul>
+				<li class="mui-paixu">
+					<select class="mui-btn mui-btn-block">
+					<option value="item-1">抵押类型</option>
+					<option value="item-2">类型一</option>
+					<option value="item-3">类型二</option>
+					<option value="item-4">类型三</option>
+					<option value="item-5">类型四</option>
+					</select>
+				</li>
+				<li class="mui-paixu">
+					<select class="mui-btn mui-btn-block">
+					<option value="item-1">综合排序</option>
+					<option value="item-2">类型一</option>
+					<option value="item-3">类型二</option>
+					<option value="item-4">类型三</option>
+					<option value="item-5">类型四</option>
+					</select>
+				</li>
+				<li class="mui-paixu">
+					<select class="mui-btn mui-btn-block">
+					<option value="item-1">筛选</option>
+					<option value="item-2">类型一</option>
+					<option value="item-3">类型二</option>
+					<option value="item-4">类型三</option>
+					<option value="item-5">类型四</option>
+					</select>
+				</li>
+				</ul>
+			</div>
+			<div class="mui-loanrz-body">
+				<h5>合作贷款机构100个</h5>
+				<ul id="list" class="mui-table-view">
+					<div class="mui-scroll">
+				<li class="mui-sqjilu" v-for="item in items">
+					<a href="loan-product.html" :data-guid="item.guid" @tap="open_detail(item)">
+						<img class="mui-media-object mui-pull-left" src="../images/loan-zx0106121.png">
+						<div class="mui-media-body">
+							<p>{{item.goods_name}}-{{item.subtitle}}</p>
+							<p class='mui-ellipsis'>
+								<span style="font-size: 10px; color: #666666;">可贷款{{item.quota_range_start}}~{{item.quota_range_end}}万  分期还款</span>
+								<span class="mui-zhuangtai">{{item.pass_rate}}</span>
+							</p>
+							<p class='mui-time'>
+								<button type="button" class="mui-btn mui-btn-outlined mui-btn-warning" style="color: #FF6600;">
+									{{item.mortgage_type}}</button>
+								<span class="mui-shijian">56333个企业申请</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				</div>
+			</ul>  
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="best-practices/list-to-detail/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var lastId = '',
+				minId = ''; //最新新闻的id 
+			var webview_detail = null; //详情页webview
+			var titleNView = { //详情页原生导航配置
+				backgroundColor: '#f7f7f7', //导航栏背景色
+				titleText: '', //导航栏标题
+				titleColor: '#000000', //文字颜色
+				type: 'transparent', //透明渐变样式
+				autoBackButton: true, //自动绘制返回箭头
+				splitLine: { //底部分割线
+					color: '#cccccc'
+				}
+			}
+
+			//mui初始化，配置下拉刷新
+			mui.init({
+				pullRefresh: {
+					container: '#list',
+					down: {
+						style: 'circle',
+						offset: '0px',
+						auto: true,
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+
+			/**
+			 *  下拉刷新获取最新列表 
+			 */
+			function pulldownRefresh() {
+
+				if(window.plus && plus.networkinfo.getCurrentType() === plus.networkinfo.CONNECTION_NONE) {
+					plus.nativeUI.toast('似乎已断开与互联网的连接', {
+						verticalAlign: 'top'
+					});
+					return;
+				}
+
+				var data = {
+					column: "goods_id,pass_rate,goods_name,mortgage_type,subtitle,quota_range_start,quota_range_end,apply_condition1,apply_condition2" //需要的字段名
+				}
+
+				if(lastId) { //说明已有数据，目前处于下拉刷新，增加时间戳，触发服务端立即刷新，返回最新数据
+					data.lastId = lastId;
+					data.time = new Date().getTime() + "";
+				}
+
+				//请求顶部banner信息
+//				mui.getJSON("http://spider.dcloud.net.cn/api/banner/36kr", data, function(rsp) {
+//					news.banner = {
+//						guid: rsp.post_id,
+//						title: rsp.title,
+//						cover: rsp.cover,
+//						author: rsp.author_name,
+//						time: dateUtils.format(rsp.published_at)
+//					};
+//				});
+
+				//请求最新列表信息流				
+//				test start
+				
+				mui.getJSON("http://60.174.234.53:1022/Home/Index/ajaxZixunList", data, function(rsp) {
+					mui('#list').pullRefresh().endPulldownToRefresh();
+					if(rsp && rsp.length > 0) {
+						lastId = rsp[0].id; //保存最新消息的id，方便下拉刷新时使用
+						
+						if(!minId) {//首次拉取列表时保存最后一条消息的id，方便上拉加载时使用
+							minId = rsp[rsp.length - 1].id; 										
+						}
+						news.items = convert(rsp).concat(news.items);
+					}
+				});
+				
+//				test end
+
+			}
+
+			/**
+			 * 上拉加载拉取历史列表 
+			 */
+			function pullupRefresh() {
+				var data = {
+					column: "goods_id,pass_rate,mortgage_type,goods_name,subtitle,quota_range_start,quota_range_end,apply_condition1,apply_condition2" //需要的字段名
+				};
+
+				if(minId) { //说明已有数据，目前处于上拉加载，传递当前minId 返回历史数据
+					data.minId = minId;
+					data.time = new Date().getTime() + "";
+					data.pageSize = 10;
+				}
+				//请求历史列表信息流
+
+				//test start
+				
+					mui.getJSON("http://60.174.234.53:1022/Home/Index/ajaxZixunList", data, function(rsp) {
+					mui('#list').pullRefresh().endPullupToRefresh();
+					if(rsp && rsp.length > 0) {
+						minId = rsp[rsp.length - 1].id; //保存最后一条消息的id，上拉加载时使用
+						news.items = news.items.concat(convert(rsp));
+					}
+					
+				});
+				
+				//test end
+				
+			}
+
+			mui.plusReady(function() {
+				//预加载详情页
+				webview_detail = mui.preload({
+					url: 'loan-product.html',
+					id: 'news_detail',
+					styles: {
+						"render": "always",
+						"popGesture": "hide",
+						"bounce": "vertical",
+						"bounceBackground": "#efeff4",
+						"titleNView": titleNView
+					}
+				});
+			});
+
+			var news = new Vue({
+				el: '#news',
+				data: {
+					banner: {}, //顶部banner数据
+					items: [] //列表信息流数据
+				}
+			});
+
+			/**
+			 * 打开新闻详情
+			 * 
+			 * @param {Object} item 当前点击的新闻对象
+			 */
+			function open_detail(item) {
+				//触发子窗口变更新闻详情
+				mui.fire(webview_detail, 'get_detail', {
+					guid: item.guid,
+					goods_name: item.goods_name,
+					subtitle: item.subtitle,
+					quota_range_start: item.quota_range_start,
+					quota_range_end: item.quota_range_end,
+					mortgage_type:item.mortgage_type,
+					pass_rate:item.pass_rate
+				});
+
+				//更改详情页原生导航条信息
+				titleNView.titleText = item.title;
+				webview_detail.setStyle({
+					"titleNView": titleNView
+				});
+				setTimeout(function() {
+					webview_detail.show("slide-in-right", 300);
+				}, 150);
+			}
+
+			/**
+			 * 1、将服务端返回数据，转换成前端需要的格式
+			 * 2、若服务端返回格式和前端所需格式相同，则不需要改功能
+			 * 
+			 * @param {Array} items 
+			 */
+			function convert(items) {
+				var newItems = [];
+				items.forEach(function(item) {
+					newItems.push({
+						guid: item.goods_id,
+						goods_name: item.goods_name,
+						subtitle: item.subtitle,
+						quota_range_start: item.quota_range_start,
+						quota_range_end: item.quota_range_end,
+						mortgage_type:item.mortgage_type,
+						pass_rate:item.pass_rate
+					});
+				});
+				return newItems;
+			}
+
+			/**
+			 * 格式化时间的辅助类，将一个时间转换成x小时前、y天前等
+			 */
+			var dateUtils = {
+				UNITS: {
+					'年': 31557600000,
+					'月': 2629800000,
+					'天': 86400000,
+					'小时': 3600000,
+					'分钟': 60000,
+					'秒': 1000
+				},
+				humanize: function(milliseconds) {
+					var humanize = '';
+					mui.each(this.UNITS, function(unit, value) {
+						if(milliseconds >= value) {
+							humanize = Math.floor(milliseconds / value) + unit + '前';
+							return false;
+						}
+						return true;
+					});
+					return humanize || '刚刚';
+				},
+				format: function(dateStr) {
+					var date = this.parse(dateStr)
+					var diff = Date.now() - date.getTime();
+					if(diff < this.UNITS['天']) {
+						return this.humanize(diff);
+					}
+
+					var _format = function(number) {
+						return(number < 10 ? ('0' + number) : number);
+					};
+					return date.getFullYear() + '/' + _format(date.getMonth() + 1) + '/' + _format(date.getDay()) + '-' + _format(date.getHours()) + ':' + _format(date.getMinutes());
+				},
+				parse: function(str) { //将"yyyy-mm-dd HH:MM:ss"格式的字符串，转化为一个Date对象
+					var a = str.split(/[^0-9]/);
+					return new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]);
+				}
+			};
+		</script>
+		
+	</body>
+</html>

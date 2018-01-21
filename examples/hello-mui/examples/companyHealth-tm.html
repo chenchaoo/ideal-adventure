@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+	</head>
+	<style>
+		body{
+			color: #333333;
+		}
+		#header{background-color: #FFFFFF;
+	            box-shadow:none;}
+	     
+	    .qitj-tmbody{
+	    	padding: 0 20px;
+	    	background: #fff;
+	    }   
+	    .qitj-tmbody div{
+			width: 100%;
+			padding: 5px 0;
+		}
+		.mui-table-view-radio .mui-table-view-cell{
+			margin: 0;
+			padding:15px 0;
+		} 
+	    .qitj-tmbody div div{
+			width: 70px;
+		} 
+		.qitj-tmbody ul li label{
+			padding-left: 0px;
+		}    
+		.qitj-tmbody i{
+			float: left;
+			margin-right: 10px;
+		}  
+		.qitj-tmbody h4{
+			font-size: 14px;
+			color: #333;
+			font-weight: normal;
+			/*margin:10 0 0px 10px;*/
+		}
+		.qitj-tmbody li{
+			/*margin:10px 0 10px;*/
+		}
+		.qitj-tmbody span{
+			font-size: 12px;
+			color: #333;
+			/*margin:0px 10px 0px;*/
+		}
+			
+        .mui-radio input[type="radio"]:checked + i {
+		    background: #eb544b none repeat scroll 0 0;
+		    border: medium none;
+		    line-height: 15px;
+}
+
+        .mui-radio input[type="radio"] + i {
+		    border: 1px solid #999;
+		    border-radius: 8px;
+		    color: #fff;
+		    display: inline-block;
+		    font-size: 14px;
+		    height: 15px;
+		    line-height: 16px;
+		    padding: 0;
+		    text-align: center;
+		    width: 15px;
+		    margin-top: 3px;
+		}
+		.mui-radio input[type="radio"]
+		{
+			    display: none;
+		}
+		
+		
+#qytj-tmbtn {
+    border: medium none;
+    color: #ffffff;
+    display: block;
+    background-color: #ff9900;
+    font-size: 16px;
+    height: auto;
+    font-weight: normal;
+    padding: 12px 0;
+    margin: 50px 0 0px;
+    width: 100%;
+    border-radius: 0;
+} 
+
+		
+	</style>
+
+	<body>
+		<div class="mui-daohang"></div>
+		<header class="mui-bar mui-bar-naver">
+<a class="mui-icon" href="javascript:history.go(-1)" target="_self">
+<img class="mui-guanbi" src="../images/guanbi.png">
+</a>
+<h1 class="mui-title mui-info">财务指标</h1>
+</header>
+		
+		<div class="mui-content">
+			<div class="qitj-tmbody">
+				<ul class="mui-table-view mui-table-view-radio">
+					<!--毛利率+-->
+					<li class="mui-table-view-cell">
+						<h4>毛利率+</h4>
+						
+						<!--<label for="second" style="margin:0px;">
+						<input id="second" name="goods_parameters" value="1" type="radio">
+						<i>✓</i>
+						<span class="groupright-span">二手</span>
+						</label>-->
+						
+						<div class="mui-input-row" >
+							<div class=" mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio" type="radio" value="0" checked="" >
+							<i>✓</i>
+							<span>20%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio" type="radio" value="0" checked="">
+							<i>✓</i>
+							<span>30%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left ">
+							<label style="padding-left: 0px;">
+							<input name="radio" type="radio" value="0">
+							<i>✓</i>
+							<span>40%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio" type="radio" value="0" checked="">
+							<i>✓</i>
+							<span>50%</span>
+							</label>
+							</div>
+			            </div>	
+					</li>
+					<!--净利率+-->
+					<li class="mui-table-view-cell">
+						<h4>净利率+</h4>
+						<div class="mui-input-row">
+							<div class=" mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio1" type="radio" value="1" checked="" >
+							<i>✓</i>
+							<span>20%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio1" type="radio" value="1" checked="" >
+							<i>✓</i>
+							<span>30%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left ">
+							<label style="padding-left: 0px;">
+							<input name="radio1" type="radio" value="1" checked="" >
+							<i>✓</i>
+							<span>40%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio1" type="radio" value="1" checked="" >
+							<i>✓</i>
+							<span>50%</span>
+							</label>
+							</div>
+			            </div>	
+					</li>
+					<!--较上年度增长率+-->
+					<li class="mui-table-view-cell">
+						<h4>较上年度增长率+</h4>
+						<div class="mui-input-row">
+							<div class=" mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio2" type="radio" value="2" checked="" >
+							<i>✓</i>
+							<span>20%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio2" type="radio" value="2" checked="" >
+							<i>✓</i>
+							<span>30%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left ">
+							<label style="padding-left: 0px;">
+							<input name="radio2" type="radio" value="2" checked="" >
+							<i>✓</i>
+							<span>40%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio2" type="radio" value="2" checked="" >
+							<i>✓</i>
+							<span>50%</span>
+							</label>
+							</div>
+			            </div>	
+					</li>
+					<!--环比月增长率+-->
+					<li class="mui-table-view-cell">
+						<h4>环比月增长率+</h4>
+						<div class="mui-input-row">
+							<div class=" mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio3" type="radio" value="3" checked="" >
+							<i>✓</i>
+							<span>20%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio3" type="radio" value="3" checked="" >
+							<i>✓</i>
+							<span>30%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left ">
+							<label style="padding-left: 0px;">
+							<input name="radio3" type="radio" value="3" checked="" >
+							<i>✓</i>
+							<span>40%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio3" type="radio" value="3" checked="" >
+							<i>✓</i>
+							<span>50%</span>
+							</label>
+							</div>
+			            </div>	
+					</li>
+					<!--年度增长预期+-->
+					<li class="mui-table-view-cell">
+						<h4>年度增长预期+</h4>
+						<div class="mui-input-row">
+							<div class=" mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio4" type="radio" value="4" checked="" >
+							<i>✓</i>
+							<span>20%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio4" type="radio" value="4" checked="" >
+							<i>✓</i>
+							<span>30%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left ">
+							<label style="padding-left: 0px;">
+							<input name="radio4" type="radio" value="4" checked="" >
+							<i>✓</i>
+							<span>40%</span>
+							</label>
+							</div>
+							<div class="mui-radio mui-pull-left mui-left">
+							<label style="padding-left: 0px;">
+							<input name="radio4" type="radio" value="4" checked="" >
+							<i>✓</i>
+							<span>50%</span>
+							</label>
+							</div>
+			            </div>	
+					</li>
+				</ul>
+			</div>
+			<!--<button type="button" class="mui-btn mui-btn-block" id="qytj-tmbtn">提交</button>-->
+			<a class="mui-btn mui-btn-block" id="qytj-tmbtn" href="companyHealth-jg.html">提交</a>
+		</div>
+		
+		
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+	</body>
+
+</html>

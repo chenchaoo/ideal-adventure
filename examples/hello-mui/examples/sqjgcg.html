@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>企业信息认证</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+		<!--App自定义的css-->
+		
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+		<style>
+			h5 {
+				margin: 5px 7px;
+			}
+			.mui-btn-blue, .mui-btn-primary, input[type=submit]{
+				background-color: #ff9900;
+				width: 100%;
+				border: 1px solid #ff9900;
+				border-radius:0px;
+			}
+			.mui-table-view-cell{
+				padding: 10px 15px;
+				font-family:'Helvetica Neue', Helvetica, sans-serif;
+				
+			}
+			.mui-table-view-cell  span{
+				color: #999;
+			}
+			.mui-table-view-cell.mui-collapse>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse>.mui-push-right:after{
+				content:'\e583';
+			}
+			.mui-input-row label{
+				width: 36%;
+			}
+			.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+				width: 64%;
+			}
+			.mui-bar-nav{
+				box-shadow:0 1px 6px #5c6bc2;
+			}
+			.mui-bar .mui-title{
+				width: 100%;
+			}
+			.mui-title{
+				margin: 0px;
+			}
+			p, span, h3{
+				font-weight: normal;
+			}
+			.mui-input-group .mui-input-row{
+				height: 104px;
+			}
+			.mui-checkbox label, .mui-radio label{
+				float:left;
+				width: 40%;
+			}
+			.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio]{
+				top:30px
+			}
+			.mui-card{
+				margin: 0px;
+				box-shadow:0 1px 2px #fff;
+			}
+			.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio]{
+				left: 7px;
+			}
+			.mui-checkbox.mui-left label, .mui-radio.mui-left label{
+				padding-left: 35px;
+			}
+			.itum-aa{
+				list-style:none;
+			}
+			.itum-aa li{
+				width: 100%;
+				float: left;
+				position:relative;
+				left: 75px;
+			}
+			.mui-loanrz-body h5{
+	    	font-size: 13px; 
+	    	color: #999999;
+	    	padding: 15px 10px;
+	    	border-bottom: 1px solid #eee;
+	    	margin: 0;
+	    	font-weight: normal;
+	    }
+	    .mui-sqjilu img{
+	    	width:73px;
+	    	height:73px;
+	    }
+	    .mui-loanrz-body{
+	    	background: #fff;
+	    	padding: 0;
+	    }
+	    .mui-sqjilu .mui-media-object{
+	    	width: 65px;
+	    	margin-left: 30px;
+	    }
+	    .mui-media-body p.mui-ellipsis{
+	    	margin-bottom: 8px;
+	    }
+	    .mui-sqjilu .mui-media-body p.mui-time .mui-shijian{
+	    	line-height: 25px;
+	    }
+	    .mui-btn-outlined.mui-btn-warning, .mui-btn-outlined.mui-btn-yellow{
+	    	font-size: 12px;
+	    	border: 1px solid #ff6600;
+	    	border-radius: 0;
+	    	padding: 2px;
+	    	color: #ff6600;
+	    }
+	    .mui-btn-outlined.mui-btn-green, .mui-btn-outlined.mui-btn-positive, .mui-btn-outlined.mui-btn-success{
+	    	font-size: 12px;
+	    	border: 1px solid #2abd31;
+	    	border-radius: 0;
+	    	padding: 2px;
+	    	color: #2abd31;
+	    }
+	    .mui-btn-outlined.mui-btn-blue, .mui-btn-outlined.mui-btn-primary{
+	    	font-size: 12px;
+	    	border: 1px solid #5c6bc2;
+	    	border-radius: 0;
+	    	padding: 2px;
+	    	color: #5c6bc2;
+	    }
+	    .mui-checkbox.mui-left input[type="checkbox"], .mui-radio.mui-left input[type="radio"]{
+	    	position: absolute;
+	    	left: 0px;
+	    	top:35px;
+	    	width: auto;
+	    	height: auto;
+	    	display: none;
+	    }
+	    
+.mui-radio input[type="radio"] + i {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 15px;
+    line-height: 16px;
+    margin-top: 0px;
+    padding: 0;
+    text-align: center;
+    width: 15px;
+    position: absolute;
+	left: 0px;
+	top:35px;
+}
+
+.mui-radio input[type="radio"]:checked + i {
+    background: #eb544b none repeat scroll 0 0;
+    border: medium none;
+    line-height: 15px;
+}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-daohang"></div>
+		<header class="mui-bar mui-bar-naver mui-san">
+			<a class="mui-icon" href="javascript:history.go(-1)" target="_self">
+				<img src="../images/fanhui2.png">
+			</a>
+			<h1 class="mui-title" style="text-align: center;margin: 0;">申请结果</h1>
+		</header>
+		<div style="height: 180px;background: #5c6bc2;position: relative; padding: 35px 0; display: none;">
+			<sapn class="mui-title" style="font-size: 18px; ">恭喜您，<p style="position:relative;bottom:14px;font-size: 18px;color: #fff;">您符合该贷款产品的申请要求</p></span>
+			
+			<h3 style="width: 100%;color: #9fa9e4;font-size: 12px;text-align: center;position: relative;bottom: 25px;">
+			请耐心等待业务员的电话通知</h3>
+		</div>
+		
+		
+		<div style="height: 180px;background: #5c6bc2;position: relative;">
+			<p class="mui-title" style="font-size: 18px;position: relative; padding-top: 35px;">很遗憾，申请失败</p>
+			
+			<h3 style="padding: 0px 20px; color: rgb(159, 169, 228); font-size: 12px; margin: 30px auto 0px; position: relative; text-align: center;">很抱歉，您的资质不符合该贷款产品的申请要求</h3>
+		</div>		
+		<div class="mui-content" style=" background: #fff;">
+			<h5 class="mui-content-padded" style=" margin:0;background: #ffeeb1;font-size:10px;font-weight:normal;padding: 10px 12px;color:#ff6600; line-height: 15px;"><img src="../images/dl.png" style=" width: 15px; float: left;" />&nbsp;&nbsp;系统为您推荐出符合您资质的产品,请立即申请</h5>
+			<div class="mui-loanrz-body">
+				<ul class="mui-table-view" style="margin-bottom: 80px;">
+				<li class="mui-sqjilu mui-radio">
+					<div class="mui-radio mui-pull-left mui-left">
+						<label>
+							<input name="radio3" value="3" checked="" type="radio">
+							<i>✓</i>
+						</label>
+					</div>
+					<a href="loan-product.html">
+						<img class="mui-media-object mui-pull-left" src="../images/loan-zx0106123.png">
+						<div class="mui-media-body">
+							<p>南昌银行</p>
+							<p class='mui-ellipsis'>
+								<span style="font-size: 10px; color: #666666;">可贷款8-50万  分期还款</span>
+								<span class="mui-zhuangtai">4.6%</span>
+							</p>
+							<p class='mui-time'>
+								<button type="button" class="mui-btn mui-btn-outlined mui-btn-warning" style="color: #FF6600;">
+									房屋抵押</button>
+								<span class="mui-shijian">56333个企业申请</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-sqjilu">
+					<div class="mui-radio mui-pull-left mui-left">
+						<label>
+							<input name="radio3" value="3" checked="" type="radio">
+							<i>✓</i>
+						</label>
+					</div>
+					<a href="loan-product.html">
+						<img class="mui-media-object mui-pull-left" src="../images/loan-zx0106123.png">
+						<div class="mui-media-body">
+							<p>南昌银行</p>
+							<p class='mui-ellipsis'>
+								<span style="font-size: 10px; color: #666666;">可贷款8-50万  分期还款</span>
+								<span class="mui-zhuangtai">4.6%</span>
+							</p>
+							<p class='mui-time'>
+								<button type="button" class="mui-btn mui-btn-outlined mui-btn-warning" style="color: #FF6600;">
+									房屋抵押</button>
+								<span class="mui-shijian">56333个企业申请</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				</ul>
+				</div>
+			<button type="button" class="mui-btn mui-btn-primary" onclick="return false;" style="position: fixed;bottom: 0%;background-color: #ff9900;width: 100%;border: 1px solid #ff9900;border-radius:0px;font-size: 16px;">下一步</button>
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<!--<script src="../js/mui.picker.min.js"></script>-->
+		<script src="../js/mui.picker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			 //语音识别完成事件
+			document.getElementById("search").addEventListener('recognized', function(e) {
+				console.log(e.detail.value);
+			});
+
+			var nativeWebview, imm, InputMethodManager;
+			var initNativeObjects = function() {
+				if (mui.os.android) {
+					var main = plus.android.runtimeMainActivity();
+					var Context = plus.android.importClass("android.content.Context");
+					InputMethodManager = plus.android.importClass("android.view.inputmethod.InputMethodManager");
+					imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);
+				} else {
+					nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+				}
+			};
+			var showSoftInput = function() {
+				if (mui.os.android) {
+					imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+				} else {
+					nativeWebview.plusCallMethod({
+						"setKeyboardDisplayRequiresUserAction": false
+					});
+				}
+				setTimeout(function() {
+					var inputElem = document.querySelector('input');
+					inputElem.focus();
+					inputElem.parentNode.classList.add('mui-active'); //第一个是search，加上激活样式
+				}, 200);
+			};
+			mui.plusReady(function() {
+				initNativeObjects();
+				showSoftInput();
+			});
+
+		</script>
+		
+	</body>
+
+</html>
+					
+				
